@@ -2,6 +2,7 @@ import random
 import time
 import torch
 import sys
+# KDPM2AncestralDiscreteScheduler new implementation, wainting distilled !
 from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
 
 repo_id = "stabilityai/stable-diffusion-2"
