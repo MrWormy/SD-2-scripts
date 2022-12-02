@@ -1,6 +1,9 @@
 // sr
 python inference_realesrgan.py -n RealESRGAN_x4plus -i ../SD-2/astronaut.png -o ../SD-2/SR --fp32
 
+// start
+python main.py "Broad day light city in africa" "building" 20 9
+
 // pre
 conda create --name sd2 python=3.10
 pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
