@@ -36,5 +36,3 @@ for i in range(int(sys.argv[5]) or 10):
         info.add_text('seed', f"{seed}")
         info.add_text('nsample', f"{ind}")
         image.save(f"out/{name}.png", pnginfo=info)
-        # im = Image.open(f"out/{name}.png")
-        # print(f"{im.info}")
