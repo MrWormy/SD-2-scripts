@@ -9,6 +9,7 @@ repo_id = "stabilityai/stable-diffusion-2"
 # torch_dtype=torch.float16, revision="fp16"
 pipe = DiffusionPipeline.from_pretrained(repo_id)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
+# Generator(device='cuda')
 generator = torch.Generator().manual_seed(random.getrandbits(16))
 
 prompt = sys.argv[1] or "An improvised prompt"
