@@ -23,4 +23,4 @@ for i in range(10):
                   negative_prompt=negative_prompt, num_images_per_prompt=3).images
 
     for image in images:
-        image.save(f"out/out{round(time.time())}_{random.getrandbits(8)}.png")
+        image.save(f"out/{round(time.time())}_{random.getrandbits(8)}.png")
