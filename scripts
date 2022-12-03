@@ -7,3 +7,6 @@ python main.py "Broad day light city in africa" "building" 20 9
 // pre
 conda create --name sd2 python=3.10
 pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
+
+//cuda enabled
+conda install pytorch torchvision torchaudio pytorch-cuda=11.7 -c pytorch -c nvidia
