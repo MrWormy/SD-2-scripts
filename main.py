@@ -7,7 +7,7 @@ from PIL import Image, PngImagePlugin
 from diffusers import DiffusionPipeline, DPMSolverMultistepScheduler
 
 device = "cuda"
-repo_id = "stabilityai/stable-diffusion-2"
+repo_id = "stabilityai/stable-diffusion-2-1"
 
 pipe = DiffusionPipeline.from_pretrained(repo_id, torch_dtype=torch.float16, revision="fp16") if device == "cuda" \
     else DiffusionPipeline.from_pretrained(repo_id)
