@@ -12,6 +12,9 @@ repo_id = "stabilityai/stable-diffusion-2-1"
 pipe = DiffusionPipeline.from_pretrained(repo_id, torch_dtype=torch.float16, revision="fp16") if device == "cuda" \
     else DiffusionPipeline.from_pretrained(repo_id)
 pipe.scheduler = DPMSolverMultistepScheduler.from_config(pipe.scheduler.config)
+pipe.safety_checker = None
+pipe.feature_extractor = None
+pipe.requires_safety_checker = False
 pipe.to(device)
 
 prompt = sys.argv[1] or "An improvised prompt"
