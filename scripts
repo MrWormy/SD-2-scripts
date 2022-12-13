@@ -4,6 +4,8 @@ python inference_realesrgan.py -n RealESRGAN_x4plus -i ../SD-2/astronaut.png -o 
 // start
 python main.py "Broad day light city in africa" "building" 20 9
 
+install xtransformers from fb for right version from action shards
+
 // pre
 conda create --name sd2 python=3.10
 pip install --upgrade git+https://github.com/huggingface/diffusers.git transformers accelerate scipy
